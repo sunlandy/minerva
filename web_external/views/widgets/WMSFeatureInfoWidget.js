@@ -7,7 +7,6 @@ import { restRequest } from 'girder/rest';
 import View from '../view';
 import contentTemplate from '../../templates/widgets/wmsFeatureInfoContent.pug';
 import GeoJSONStyle from '../../models/GeoJSONStyle';
-import template from '../../templates/widgets/wmsFeatureInfoWidget.pug';
 import '../../stylesheets/widgets/featureInfoWidget.styl';
 
 const WMSFeatureInfoWidget = View.extend({
@@ -135,7 +134,11 @@ const WMSFeatureInfoWidget = View.extend({
     },
 
     render: function () {
-        this.$el.append(template);
+        $('<div id="m-wms-info-dialog" title="Feature Info"></div>').dialog({
+            autoOpen: false,
+            width: 600,
+            maxHeight: 400
+        });
     }
 });
 export default WMSFeatureInfoWidget;

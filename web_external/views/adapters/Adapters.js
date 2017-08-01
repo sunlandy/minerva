@@ -534,3 +534,7 @@ rendering.geo.WmsRepresentation = rendering.geo.defineMapLayer('wms', function (
         this.trigger('m:map_layer_renderable', this);
     };
 }, rendering.geo.MapRepresentation);
+
+export {
+    rendering
+}
