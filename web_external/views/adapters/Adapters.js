@@ -537,4 +537,4 @@ rendering.geo.WmsRepresentation = rendering.geo.defineMapLayer('wms', function (
 
 export {
     rendering
-}
+};
