@@ -294,6 +294,10 @@ const DatasetModel = MinervaModel.extend({
         this.set('visible', true);
         this.set('opacity', 1);
         this.set('displayed', false);
+    },
+
+    triggerZoomTo() {
+        this.trigger('zoomTo');
     }
 });
 export default DatasetModel;

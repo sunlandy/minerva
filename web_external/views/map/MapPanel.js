@@ -283,6 +283,12 @@ const MapPanel = Panel.extend({
             }
         }, this);
 
+        this.listenTo(this.collection, 'zoomTo', () => {
+            if (this.mapCreated) {
+                
+            };
+        });
+
         Panel.prototype.initialize.apply(this);
     },
 
